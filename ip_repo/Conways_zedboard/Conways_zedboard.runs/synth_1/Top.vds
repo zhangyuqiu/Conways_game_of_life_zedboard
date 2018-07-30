@@ -1,0 +1,1450 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Fri Jul 13 10:35:17 2018
+# Process ID: 11080
+# Current directory: C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/Conways_zedboard.runs/synth_1
+# Command line: vivado.exe -log Top.vds -mode batch -messageDb vivado.pb -notrace -source Top.tcl
+# Log file: C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/Conways_zedboard.runs/synth_1/Top.vds
+# Journal file: C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/Conways_zedboard.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Top.tcl -notrace
+Command: synth_design -top Top -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 10356 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 313.094 ; gain = 106.309
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Top' [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/srcs/Top.sv:25]
+INFO: [Synth 8-638] synthesizing module 'Timer' [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/srcs/Timer.sv:23]
+	Parameter COUNT_MAX bound to: 80000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Timer' (1#1) [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/srcs/Timer.sv:23]
+INFO: [Synth 8-638] synthesizing module 'FSM' [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/srcs/FSM.sv:25]
+	Parameter DEFAULT bound to: 4'b0000 
+	Parameter RUN bound to: 4'b1111 
+	Parameter WRITE bound to: 4'b0001 
+	Parameter WRITEALL bound to: 4'b0010 
+	Parameter WAIT bound to: 4'b0011 
+WARNING: [Synth 8-87] always_comb on 'next_state_reg' did not result in combinational logic [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/srcs/FSM.sv:67]
+INFO: [Synth 8-256] done synthesizing module 'FSM' (2#1) [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/srcs/FSM.sv:25]
+INFO: [Synth 8-638] synthesizing module 'pe_array' [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/srcs/pe_array.sv:6]
+INFO: [Synth 8-638] synthesizing module 'pe' [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/srcs/pe.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'pe' (3#1) [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/srcs/pe.sv:23]
+INFO: [Synth 8-256] done synthesizing module 'pe_array' (4#1) [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/srcs/pe_array.sv:6]
+INFO: [Synth 8-638] synthesizing module 'VESADriver' [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/srcs/VESADriver.sv:10]
+	Parameter HLEN bound to: 11'b10100000000 
+	Parameter HFRONT_PORCH_LEN bound to: 11'b00000110000 
+	Parameter HSYNC_WIDTH bound to: 11'b00001110000 
+	Parameter HBACK_PORCH_LEN bound to: 11'b00011111000 
+	Parameter HTOTAL bound to: 11'b11010011000 
+	Parameter VHEIGHT bound to: 11'b10000000000 
+	Parameter VFRONT_PORCH_LEN bound to: 11'b00000000001 
+	Parameter VSYNC_LEN bound to: 11'b00000000011 
+	Parameter VBACK_PORCH_LEN bound to: 11'b00000100110 
+	Parameter VTOTAL bound to: 11'b10000101010 
+INFO: [Synth 8-256] done synthesizing module 'VESADriver' (5#1) [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/srcs/VESADriver.sv:10]
+WARNING: [Synth 8-350] instance 'vga_driver' of module 'VESADriver' requires 6 connections, but only 5 given [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/srcs/Top.sv:85]
+INFO: [Synth 8-638] synthesizing module 'Display' [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/srcs/Display.sv:25]
+INFO: [Synth 8-226] default block is never used [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/srcs/Display.sv:44]
+INFO: [Synth 8-256] done synthesizing module 'Display' (6#1) [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/srcs/Display.sv:25]
+INFO: [Synth 8-256] done synthesizing module 'Top' (7#1) [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/srcs/Top.sv:25]
+WARNING: [Synth 8-3331] design Display has unconnected port x[4]
+WARNING: [Synth 8-3331] design Display has unconnected port x[3]
+WARNING: [Synth 8-3331] design Display has unconnected port x[2]
+WARNING: [Synth 8-3331] design Display has unconnected port x[1]
+WARNING: [Synth 8-3331] design Display has unconnected port x[0]
+WARNING: [Synth 8-3331] design Display has unconnected port y[4]
+WARNING: [Synth 8-3331] design Display has unconnected port y[3]
+WARNING: [Synth 8-3331] design Display has unconnected port y[2]
+WARNING: [Synth 8-3331] design Display has unconnected port y[1]
+WARNING: [Synth 8-3331] design Display has unconnected port y[0]
+WARNING: [Synth 8-3331] design Top has unconnected port single_write[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 385.934 ; gain = 179.148
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 385.934 ; gain = 179.148
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/constraints/constraints.xdc]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 33]]'. [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/constraints/constraints.xdc:362]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 34]]'. [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/constraints/constraints.xdc:367]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 35]]'. [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/constraints/constraints.xdc:372]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 13]]'. [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/constraints/constraints.xdc:375]
+Finished Parsing XDC File [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/constraints/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/constraints/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 719.551 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 719.551 ; gain = 512.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 719.551 ; gain = 512.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 719.551 ; gain = 512.766
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "trigger" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'FSM'
+INFO: [Synth 8-5544] ROM "x" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "num_of_running_cycles" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "val" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "x" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'next_state_reg' [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/srcs/FSM.sv:67]
+WARNING: [Synth 8-327] inferring latch for variable 'next_state_reg' [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/srcs/FSM.sv:67]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 DEFAULT |                              001 |                             0000
+                   WRITE |                              010 |                             0001
+                     RUN |                              100 |                             1111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'FSM'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [C:/Users/zhangyu/Desktop/Research18/ip_repo/Conways_zedboard/srcs/FSM.sv:67]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 719.551 ; gain = 512.766
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 3     
+	   8 Input      4 Bit       Adders := 1024  
++---Registers : 
+	               32 Bit    Registers := 1     
+	               11 Bit    Registers := 3     
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1028  
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 2     
+	   3 Input      4 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2058  
+	   3 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1024  
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Timer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module FSM 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 2     
+	   3 Input      4 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 2     
+Module pe 
+Detailed RTL Component Info : 
++---Adders : 
+	   8 Input      4 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+Module VESADriver 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 2     
++---Registers : 
+	               11 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module Display 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 719.551 ; gain = 512.766
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "display/" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "timer/count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "timer/trigger" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3917] design Top has port red[3] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port red[2] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port red[1] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port red[0] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port blue[3] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port blue[2] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port blue[1] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port blue[0] driven by constant 0
+WARNING: [Synth 8-3331] design Top has unconnected port single_write[0]
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 719.551 ; gain = 512.766
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 719.551 ; gain = 512.766
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:08 . Memory (MB): peak = 719.551 ; gain = 512.766
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:00 ; elapsed = 00:01:08 . Memory (MB): peak = 719.551 ; gain = 512.766
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:08 ; elapsed = 00:01:16 . Memory (MB): peak = 747.535 ; gain = 540.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:10 ; elapsed = 00:01:17 . Memory (MB): peak = 770.957 ; gain = 564.172
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:14 ; elapsed = 00:01:22 . Memory (MB): peak = 1060.793 ; gain = 854.008
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:01:14 ; elapsed = 00:01:22 . Memory (MB): peak = 1060.793 ; gain = 854.008
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:14 ; elapsed = 00:01:22 . Memory (MB): peak = 1060.793 ; gain = 854.008
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:17 ; elapsed = 00:01:24 . Memory (MB): peak = 1060.793 ; gain = 854.008
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:17 ; elapsed = 00:01:24 . Memory (MB): peak = 1060.793 ; gain = 854.008
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:17 ; elapsed = 00:01:25 . Memory (MB): peak = 1060.793 ; gain = 854.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:19 ; elapsed = 00:01:26 . Memory (MB): peak = 1060.793 ; gain = 854.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:19 ; elapsed = 00:01:27 . Memory (MB): peak = 1060.793 ; gain = 854.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:19 ; elapsed = 00:01:27 . Memory (MB): peak = 1060.793 ; gain = 854.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    10|
+|3     |LUT1   |    35|
+|4     |LUT2   |    21|
+|5     |LUT3   |  1808|
+|6     |LUT4   |   948|
+|7     |LUT5   |   619|
+|8     |LUT6   |  4201|
+|9     |MUXF7  |    62|
+|10    |MUXF8  |    31|
+|11    |FDRE   |  1130|
+|12    |FDSE   |     1|
+|13    |LD     |     3|
+|14    |IBUF   |    28|
+|15    |OBUF   |    57|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------------------------+-----------+------+
+|      |Instance                          |Module     |Cells |
++------+----------------------------------+-----------+------+
+|1     |top                               |           |  8955|
+|2     |  ARRAY                           |pe_array   |  6564|
+|3     |    \outer[10].inner[10].PE_INST  |pe         |     6|
+|4     |    \outer[10].inner[11].PE_INST  |pe_0       |     6|
+|5     |    \outer[10].inner[12].PE_INST  |pe_1       |     6|
+|6     |    \outer[10].inner[13].PE_INST  |pe_2       |     6|
+|7     |    \outer[10].inner[14].PE_INST  |pe_3       |     6|
+|8     |    \outer[10].inner[15].PE_INST  |pe_4       |     6|
+|9     |    \outer[10].inner[16].PE_INST  |pe_5       |     6|
+|10    |    \outer[10].inner[17].PE_INST  |pe_6       |     6|
+|11    |    \outer[10].inner[18].PE_INST  |pe_7       |     6|
+|12    |    \outer[10].inner[19].PE_INST  |pe_8       |     6|
+|13    |    \outer[10].inner[1].PE_INST   |pe_9       |     4|
+|14    |    \outer[10].inner[20].PE_INST  |pe_10      |     6|
+|15    |    \outer[10].inner[21].PE_INST  |pe_11      |     6|
+|16    |    \outer[10].inner[22].PE_INST  |pe_12      |     6|
+|17    |    \outer[10].inner[23].PE_INST  |pe_13      |     6|
+|18    |    \outer[10].inner[24].PE_INST  |pe_14      |     6|
+|19    |    \outer[10].inner[25].PE_INST  |pe_15      |     6|
+|20    |    \outer[10].inner[26].PE_INST  |pe_16      |     6|
+|21    |    \outer[10].inner[27].PE_INST  |pe_17      |     6|
+|22    |    \outer[10].inner[28].PE_INST  |pe_18      |     6|
+|23    |    \outer[10].inner[29].PE_INST  |pe_19      |     6|
+|24    |    \outer[10].inner[2].PE_INST   |pe_20      |     5|
+|25    |    \outer[10].inner[30].PE_INST  |pe_21      |     6|
+|26    |    \outer[10].inner[31].PE_INST  |pe_22      |     4|
+|27    |    \outer[10].inner[32].PE_INST  |pe_23      |     3|
+|28    |    \outer[10].inner[3].PE_INST   |pe_24      |     6|
+|29    |    \outer[10].inner[4].PE_INST   |pe_25      |     6|
+|30    |    \outer[10].inner[5].PE_INST   |pe_26      |     6|
+|31    |    \outer[10].inner[6].PE_INST   |pe_27      |     6|
+|32    |    \outer[10].inner[7].PE_INST   |pe_28      |     6|
+|33    |    \outer[10].inner[8].PE_INST   |pe_29      |     6|
+|34    |    \outer[10].inner[9].PE_INST   |pe_30      |     6|
+|35    |    \outer[11].inner[10].PE_INST  |pe_31      |     8|
+|36    |    \outer[11].inner[11].PE_INST  |pe_32      |     8|
+|37    |    \outer[11].inner[12].PE_INST  |pe_33      |     8|
+|38    |    \outer[11].inner[13].PE_INST  |pe_34      |     8|
+|39    |    \outer[11].inner[14].PE_INST  |pe_35      |     8|
+|40    |    \outer[11].inner[15].PE_INST  |pe_36      |     8|
+|41    |    \outer[11].inner[16].PE_INST  |pe_37      |     8|
+|42    |    \outer[11].inner[17].PE_INST  |pe_38      |     8|
+|43    |    \outer[11].inner[18].PE_INST  |pe_39      |     8|
+|44    |    \outer[11].inner[19].PE_INST  |pe_40      |     8|
+|45    |    \outer[11].inner[1].PE_INST   |pe_41      |     6|
+|46    |    \outer[11].inner[20].PE_INST  |pe_42      |     8|
+|47    |    \outer[11].inner[21].PE_INST  |pe_43      |     8|
+|48    |    \outer[11].inner[22].PE_INST  |pe_44      |     8|
+|49    |    \outer[11].inner[23].PE_INST  |pe_45      |     8|
+|50    |    \outer[11].inner[24].PE_INST  |pe_46      |     8|
+|51    |    \outer[11].inner[25].PE_INST  |pe_47      |     8|
+|52    |    \outer[11].inner[26].PE_INST  |pe_48      |     8|
+|53    |    \outer[11].inner[27].PE_INST  |pe_49      |     8|
+|54    |    \outer[11].inner[28].PE_INST  |pe_50      |     8|
+|55    |    \outer[11].inner[29].PE_INST  |pe_51      |     8|
+|56    |    \outer[11].inner[2].PE_INST   |pe_52      |     7|
+|57    |    \outer[11].inner[30].PE_INST  |pe_53      |     8|
+|58    |    \outer[11].inner[31].PE_INST  |pe_54      |     6|
+|59    |    \outer[11].inner[32].PE_INST  |pe_55      |     3|
+|60    |    \outer[11].inner[3].PE_INST   |pe_56      |     8|
+|61    |    \outer[11].inner[4].PE_INST   |pe_57      |     8|
+|62    |    \outer[11].inner[5].PE_INST   |pe_58      |     8|
+|63    |    \outer[11].inner[6].PE_INST   |pe_59      |     8|
+|64    |    \outer[11].inner[7].PE_INST   |pe_60      |     8|
+|65    |    \outer[11].inner[8].PE_INST   |pe_61      |     8|
+|66    |    \outer[11].inner[9].PE_INST   |pe_62      |     8|
+|67    |    \outer[12].inner[10].PE_INST  |pe_63      |     6|
+|68    |    \outer[12].inner[11].PE_INST  |pe_64      |     6|
+|69    |    \outer[12].inner[12].PE_INST  |pe_65      |     6|
+|70    |    \outer[12].inner[13].PE_INST  |pe_66      |     6|
+|71    |    \outer[12].inner[14].PE_INST  |pe_67      |     6|
+|72    |    \outer[12].inner[15].PE_INST  |pe_68      |     6|
+|73    |    \outer[12].inner[16].PE_INST  |pe_69      |     6|
+|74    |    \outer[12].inner[17].PE_INST  |pe_70      |     6|
+|75    |    \outer[12].inner[18].PE_INST  |pe_71      |     6|
+|76    |    \outer[12].inner[19].PE_INST  |pe_72      |     6|
+|77    |    \outer[12].inner[1].PE_INST   |pe_73      |     4|
+|78    |    \outer[12].inner[20].PE_INST  |pe_74      |     6|
+|79    |    \outer[12].inner[21].PE_INST  |pe_75      |     6|
+|80    |    \outer[12].inner[22].PE_INST  |pe_76      |     6|
+|81    |    \outer[12].inner[23].PE_INST  |pe_77      |     6|
+|82    |    \outer[12].inner[24].PE_INST  |pe_78      |     6|
+|83    |    \outer[12].inner[25].PE_INST  |pe_79      |     6|
+|84    |    \outer[12].inner[26].PE_INST  |pe_80      |     6|
+|85    |    \outer[12].inner[27].PE_INST  |pe_81      |     6|
+|86    |    \outer[12].inner[28].PE_INST  |pe_82      |     6|
+|87    |    \outer[12].inner[29].PE_INST  |pe_83      |     6|
+|88    |    \outer[12].inner[2].PE_INST   |pe_84      |     5|
+|89    |    \outer[12].inner[30].PE_INST  |pe_85      |     6|
+|90    |    \outer[12].inner[31].PE_INST  |pe_86      |     4|
+|91    |    \outer[12].inner[32].PE_INST  |pe_87      |     3|
+|92    |    \outer[12].inner[3].PE_INST   |pe_88      |     6|
+|93    |    \outer[12].inner[4].PE_INST   |pe_89      |     6|
+|94    |    \outer[12].inner[5].PE_INST   |pe_90      |     6|
+|95    |    \outer[12].inner[6].PE_INST   |pe_91      |     6|
+|96    |    \outer[12].inner[7].PE_INST   |pe_92      |     6|
+|97    |    \outer[12].inner[8].PE_INST   |pe_93      |     6|
+|98    |    \outer[12].inner[9].PE_INST   |pe_94      |     6|
+|99    |    \outer[13].inner[10].PE_INST  |pe_95      |     6|
+|100   |    \outer[13].inner[11].PE_INST  |pe_96      |     6|
+|101   |    \outer[13].inner[12].PE_INST  |pe_97      |     6|
+|102   |    \outer[13].inner[13].PE_INST  |pe_98      |     6|
+|103   |    \outer[13].inner[14].PE_INST  |pe_99      |     6|
+|104   |    \outer[13].inner[15].PE_INST  |pe_100     |     6|
+|105   |    \outer[13].inner[16].PE_INST  |pe_101     |     6|
+|106   |    \outer[13].inner[17].PE_INST  |pe_102     |     6|
+|107   |    \outer[13].inner[18].PE_INST  |pe_103     |     6|
+|108   |    \outer[13].inner[19].PE_INST  |pe_104     |     6|
+|109   |    \outer[13].inner[1].PE_INST   |pe_105     |     4|
+|110   |    \outer[13].inner[20].PE_INST  |pe_106     |     6|
+|111   |    \outer[13].inner[21].PE_INST  |pe_107     |     6|
+|112   |    \outer[13].inner[22].PE_INST  |pe_108     |     6|
+|113   |    \outer[13].inner[23].PE_INST  |pe_109     |     6|
+|114   |    \outer[13].inner[24].PE_INST  |pe_110     |     6|
+|115   |    \outer[13].inner[25].PE_INST  |pe_111     |     6|
+|116   |    \outer[13].inner[26].PE_INST  |pe_112     |     6|
+|117   |    \outer[13].inner[27].PE_INST  |pe_113     |     6|
+|118   |    \outer[13].inner[28].PE_INST  |pe_114     |     6|
+|119   |    \outer[13].inner[29].PE_INST  |pe_115     |     6|
+|120   |    \outer[13].inner[2].PE_INST   |pe_116     |     5|
+|121   |    \outer[13].inner[30].PE_INST  |pe_117     |     6|
+|122   |    \outer[13].inner[31].PE_INST  |pe_118     |     4|
+|123   |    \outer[13].inner[32].PE_INST  |pe_119     |     3|
+|124   |    \outer[13].inner[3].PE_INST   |pe_120     |     6|
+|125   |    \outer[13].inner[4].PE_INST   |pe_121     |     6|
+|126   |    \outer[13].inner[5].PE_INST   |pe_122     |     6|
+|127   |    \outer[13].inner[6].PE_INST   |pe_123     |     6|
+|128   |    \outer[13].inner[7].PE_INST   |pe_124     |     6|
+|129   |    \outer[13].inner[8].PE_INST   |pe_125     |     6|
+|130   |    \outer[13].inner[9].PE_INST   |pe_126     |     6|
+|131   |    \outer[14].inner[10].PE_INST  |pe_127     |     6|
+|132   |    \outer[14].inner[11].PE_INST  |pe_128     |     6|
+|133   |    \outer[14].inner[12].PE_INST  |pe_129     |     6|
+|134   |    \outer[14].inner[13].PE_INST  |pe_130     |     6|
+|135   |    \outer[14].inner[14].PE_INST  |pe_131     |     6|
+|136   |    \outer[14].inner[15].PE_INST  |pe_132     |     6|
+|137   |    \outer[14].inner[16].PE_INST  |pe_133     |     6|
+|138   |    \outer[14].inner[17].PE_INST  |pe_134     |     6|
+|139   |    \outer[14].inner[18].PE_INST  |pe_135     |     6|
+|140   |    \outer[14].inner[19].PE_INST  |pe_136     |     6|
+|141   |    \outer[14].inner[1].PE_INST   |pe_137     |     4|
+|142   |    \outer[14].inner[20].PE_INST  |pe_138     |     6|
+|143   |    \outer[14].inner[21].PE_INST  |pe_139     |     6|
+|144   |    \outer[14].inner[22].PE_INST  |pe_140     |     6|
+|145   |    \outer[14].inner[23].PE_INST  |pe_141     |     6|
+|146   |    \outer[14].inner[24].PE_INST  |pe_142     |     6|
+|147   |    \outer[14].inner[25].PE_INST  |pe_143     |     6|
+|148   |    \outer[14].inner[26].PE_INST  |pe_144     |     6|
+|149   |    \outer[14].inner[27].PE_INST  |pe_145     |     6|
+|150   |    \outer[14].inner[28].PE_INST  |pe_146     |     6|
+|151   |    \outer[14].inner[29].PE_INST  |pe_147     |     6|
+|152   |    \outer[14].inner[2].PE_INST   |pe_148     |     5|
+|153   |    \outer[14].inner[30].PE_INST  |pe_149     |     6|
+|154   |    \outer[14].inner[31].PE_INST  |pe_150     |     4|
+|155   |    \outer[14].inner[32].PE_INST  |pe_151     |     3|
+|156   |    \outer[14].inner[3].PE_INST   |pe_152     |     6|
+|157   |    \outer[14].inner[4].PE_INST   |pe_153     |     6|
+|158   |    \outer[14].inner[5].PE_INST   |pe_154     |     6|
+|159   |    \outer[14].inner[6].PE_INST   |pe_155     |     6|
+|160   |    \outer[14].inner[7].PE_INST   |pe_156     |     6|
+|161   |    \outer[14].inner[8].PE_INST   |pe_157     |     6|
+|162   |    \outer[14].inner[9].PE_INST   |pe_158     |     6|
+|163   |    \outer[15].inner[10].PE_INST  |pe_159     |     7|
+|164   |    \outer[15].inner[11].PE_INST  |pe_160     |     7|
+|165   |    \outer[15].inner[12].PE_INST  |pe_161     |     7|
+|166   |    \outer[15].inner[13].PE_INST  |pe_162     |     7|
+|167   |    \outer[15].inner[14].PE_INST  |pe_163     |     7|
+|168   |    \outer[15].inner[15].PE_INST  |pe_164     |     7|
+|169   |    \outer[15].inner[16].PE_INST  |pe_165     |     7|
+|170   |    \outer[15].inner[17].PE_INST  |pe_166     |     7|
+|171   |    \outer[15].inner[18].PE_INST  |pe_167     |     7|
+|172   |    \outer[15].inner[19].PE_INST  |pe_168     |     7|
+|173   |    \outer[15].inner[1].PE_INST   |pe_169     |     5|
+|174   |    \outer[15].inner[20].PE_INST  |pe_170     |     7|
+|175   |    \outer[15].inner[21].PE_INST  |pe_171     |     7|
+|176   |    \outer[15].inner[22].PE_INST  |pe_172     |     7|
+|177   |    \outer[15].inner[23].PE_INST  |pe_173     |     7|
+|178   |    \outer[15].inner[24].PE_INST  |pe_174     |     7|
+|179   |    \outer[15].inner[25].PE_INST  |pe_175     |     7|
+|180   |    \outer[15].inner[26].PE_INST  |pe_176     |     7|
+|181   |    \outer[15].inner[27].PE_INST  |pe_177     |     7|
+|182   |    \outer[15].inner[28].PE_INST  |pe_178     |     7|
+|183   |    \outer[15].inner[29].PE_INST  |pe_179     |     7|
+|184   |    \outer[15].inner[2].PE_INST   |pe_180     |     6|
+|185   |    \outer[15].inner[30].PE_INST  |pe_181     |     7|
+|186   |    \outer[15].inner[31].PE_INST  |pe_182     |     5|
+|187   |    \outer[15].inner[32].PE_INST  |pe_183     |     3|
+|188   |    \outer[15].inner[3].PE_INST   |pe_184     |     7|
+|189   |    \outer[15].inner[4].PE_INST   |pe_185     |     7|
+|190   |    \outer[15].inner[5].PE_INST   |pe_186     |     7|
+|191   |    \outer[15].inner[6].PE_INST   |pe_187     |     7|
+|192   |    \outer[15].inner[7].PE_INST   |pe_188     |     7|
+|193   |    \outer[15].inner[8].PE_INST   |pe_189     |     7|
+|194   |    \outer[15].inner[9].PE_INST   |pe_190     |     7|
+|195   |    \outer[16].inner[10].PE_INST  |pe_191     |     6|
+|196   |    \outer[16].inner[11].PE_INST  |pe_192     |     6|
+|197   |    \outer[16].inner[12].PE_INST  |pe_193     |     6|
+|198   |    \outer[16].inner[13].PE_INST  |pe_194     |     6|
+|199   |    \outer[16].inner[14].PE_INST  |pe_195     |     6|
+|200   |    \outer[16].inner[15].PE_INST  |pe_196     |     6|
+|201   |    \outer[16].inner[16].PE_INST  |pe_197     |     6|
+|202   |    \outer[16].inner[17].PE_INST  |pe_198     |     6|
+|203   |    \outer[16].inner[18].PE_INST  |pe_199     |     6|
+|204   |    \outer[16].inner[19].PE_INST  |pe_200     |     6|
+|205   |    \outer[16].inner[1].PE_INST   |pe_201     |     4|
+|206   |    \outer[16].inner[20].PE_INST  |pe_202     |     6|
+|207   |    \outer[16].inner[21].PE_INST  |pe_203     |     6|
+|208   |    \outer[16].inner[22].PE_INST  |pe_204     |     6|
+|209   |    \outer[16].inner[23].PE_INST  |pe_205     |     6|
+|210   |    \outer[16].inner[24].PE_INST  |pe_206     |     6|
+|211   |    \outer[16].inner[25].PE_INST  |pe_207     |     6|
+|212   |    \outer[16].inner[26].PE_INST  |pe_208     |     6|
+|213   |    \outer[16].inner[27].PE_INST  |pe_209     |     6|
+|214   |    \outer[16].inner[28].PE_INST  |pe_210     |     6|
+|215   |    \outer[16].inner[29].PE_INST  |pe_211     |     6|
+|216   |    \outer[16].inner[2].PE_INST   |pe_212     |     5|
+|217   |    \outer[16].inner[30].PE_INST  |pe_213     |     6|
+|218   |    \outer[16].inner[31].PE_INST  |pe_214     |     4|
+|219   |    \outer[16].inner[32].PE_INST  |pe_215     |     3|
+|220   |    \outer[16].inner[3].PE_INST   |pe_216     |     6|
+|221   |    \outer[16].inner[4].PE_INST   |pe_217     |     6|
+|222   |    \outer[16].inner[5].PE_INST   |pe_218     |     6|
+|223   |    \outer[16].inner[6].PE_INST   |pe_219     |     6|
+|224   |    \outer[16].inner[7].PE_INST   |pe_220     |     6|
+|225   |    \outer[16].inner[8].PE_INST   |pe_221     |     6|
+|226   |    \outer[16].inner[9].PE_INST   |pe_222     |     6|
+|227   |    \outer[17].inner[10].PE_INST  |pe_223     |     6|
+|228   |    \outer[17].inner[11].PE_INST  |pe_224     |     6|
+|229   |    \outer[17].inner[12].PE_INST  |pe_225     |     6|
+|230   |    \outer[17].inner[13].PE_INST  |pe_226     |     6|
+|231   |    \outer[17].inner[14].PE_INST  |pe_227     |     6|
+|232   |    \outer[17].inner[15].PE_INST  |pe_228     |     6|
+|233   |    \outer[17].inner[16].PE_INST  |pe_229     |     6|
+|234   |    \outer[17].inner[17].PE_INST  |pe_230     |     6|
+|235   |    \outer[17].inner[18].PE_INST  |pe_231     |     6|
+|236   |    \outer[17].inner[19].PE_INST  |pe_232     |     6|
+|237   |    \outer[17].inner[1].PE_INST   |pe_233     |     4|
+|238   |    \outer[17].inner[20].PE_INST  |pe_234     |     6|
+|239   |    \outer[17].inner[21].PE_INST  |pe_235     |     6|
+|240   |    \outer[17].inner[22].PE_INST  |pe_236     |     6|
+|241   |    \outer[17].inner[23].PE_INST  |pe_237     |     6|
+|242   |    \outer[17].inner[24].PE_INST  |pe_238     |     6|
+|243   |    \outer[17].inner[25].PE_INST  |pe_239     |     6|
+|244   |    \outer[17].inner[26].PE_INST  |pe_240     |     6|
+|245   |    \outer[17].inner[27].PE_INST  |pe_241     |     6|
+|246   |    \outer[17].inner[28].PE_INST  |pe_242     |     6|
+|247   |    \outer[17].inner[29].PE_INST  |pe_243     |     6|
+|248   |    \outer[17].inner[2].PE_INST   |pe_244     |     5|
+|249   |    \outer[17].inner[30].PE_INST  |pe_245     |     6|
+|250   |    \outer[17].inner[31].PE_INST  |pe_246     |     4|
+|251   |    \outer[17].inner[32].PE_INST  |pe_247     |     3|
+|252   |    \outer[17].inner[3].PE_INST   |pe_248     |     6|
+|253   |    \outer[17].inner[4].PE_INST   |pe_249     |     6|
+|254   |    \outer[17].inner[5].PE_INST   |pe_250     |     6|
+|255   |    \outer[17].inner[6].PE_INST   |pe_251     |     6|
+|256   |    \outer[17].inner[7].PE_INST   |pe_252     |     6|
+|257   |    \outer[17].inner[8].PE_INST   |pe_253     |     6|
+|258   |    \outer[17].inner[9].PE_INST   |pe_254     |     6|
+|259   |    \outer[18].inner[10].PE_INST  |pe_255     |     6|
+|260   |    \outer[18].inner[11].PE_INST  |pe_256     |     6|
+|261   |    \outer[18].inner[12].PE_INST  |pe_257     |     6|
+|262   |    \outer[18].inner[13].PE_INST  |pe_258     |     6|
+|263   |    \outer[18].inner[14].PE_INST  |pe_259     |     6|
+|264   |    \outer[18].inner[15].PE_INST  |pe_260     |     6|
+|265   |    \outer[18].inner[16].PE_INST  |pe_261     |     6|
+|266   |    \outer[18].inner[17].PE_INST  |pe_262     |     6|
+|267   |    \outer[18].inner[18].PE_INST  |pe_263     |     6|
+|268   |    \outer[18].inner[19].PE_INST  |pe_264     |     6|
+|269   |    \outer[18].inner[1].PE_INST   |pe_265     |     4|
+|270   |    \outer[18].inner[20].PE_INST  |pe_266     |     6|
+|271   |    \outer[18].inner[21].PE_INST  |pe_267     |     6|
+|272   |    \outer[18].inner[22].PE_INST  |pe_268     |     6|
+|273   |    \outer[18].inner[23].PE_INST  |pe_269     |     6|
+|274   |    \outer[18].inner[24].PE_INST  |pe_270     |     6|
+|275   |    \outer[18].inner[25].PE_INST  |pe_271     |     6|
+|276   |    \outer[18].inner[26].PE_INST  |pe_272     |     6|
+|277   |    \outer[18].inner[27].PE_INST  |pe_273     |     6|
+|278   |    \outer[18].inner[28].PE_INST  |pe_274     |     6|
+|279   |    \outer[18].inner[29].PE_INST  |pe_275     |     6|
+|280   |    \outer[18].inner[2].PE_INST   |pe_276     |     5|
+|281   |    \outer[18].inner[30].PE_INST  |pe_277     |     6|
+|282   |    \outer[18].inner[31].PE_INST  |pe_278     |     4|
+|283   |    \outer[18].inner[32].PE_INST  |pe_279     |     3|
+|284   |    \outer[18].inner[3].PE_INST   |pe_280     |     6|
+|285   |    \outer[18].inner[4].PE_INST   |pe_281     |     6|
+|286   |    \outer[18].inner[5].PE_INST   |pe_282     |     6|
+|287   |    \outer[18].inner[6].PE_INST   |pe_283     |     6|
+|288   |    \outer[18].inner[7].PE_INST   |pe_284     |     6|
+|289   |    \outer[18].inner[8].PE_INST   |pe_285     |     6|
+|290   |    \outer[18].inner[9].PE_INST   |pe_286     |     6|
+|291   |    \outer[19].inner[10].PE_INST  |pe_287     |     6|
+|292   |    \outer[19].inner[11].PE_INST  |pe_288     |     6|
+|293   |    \outer[19].inner[12].PE_INST  |pe_289     |     6|
+|294   |    \outer[19].inner[13].PE_INST  |pe_290     |     6|
+|295   |    \outer[19].inner[14].PE_INST  |pe_291     |     6|
+|296   |    \outer[19].inner[15].PE_INST  |pe_292     |     6|
+|297   |    \outer[19].inner[16].PE_INST  |pe_293     |     6|
+|298   |    \outer[19].inner[17].PE_INST  |pe_294     |     6|
+|299   |    \outer[19].inner[18].PE_INST  |pe_295     |     6|
+|300   |    \outer[19].inner[19].PE_INST  |pe_296     |     6|
+|301   |    \outer[19].inner[1].PE_INST   |pe_297     |     4|
+|302   |    \outer[19].inner[20].PE_INST  |pe_298     |     6|
+|303   |    \outer[19].inner[21].PE_INST  |pe_299     |     6|
+|304   |    \outer[19].inner[22].PE_INST  |pe_300     |     6|
+|305   |    \outer[19].inner[23].PE_INST  |pe_301     |     6|
+|306   |    \outer[19].inner[24].PE_INST  |pe_302     |     6|
+|307   |    \outer[19].inner[25].PE_INST  |pe_303     |     6|
+|308   |    \outer[19].inner[26].PE_INST  |pe_304     |     6|
+|309   |    \outer[19].inner[27].PE_INST  |pe_305     |     6|
+|310   |    \outer[19].inner[28].PE_INST  |pe_306     |     6|
+|311   |    \outer[19].inner[29].PE_INST  |pe_307     |     6|
+|312   |    \outer[19].inner[2].PE_INST   |pe_308     |     5|
+|313   |    \outer[19].inner[30].PE_INST  |pe_309     |     6|
+|314   |    \outer[19].inner[31].PE_INST  |pe_310     |     4|
+|315   |    \outer[19].inner[32].PE_INST  |pe_311     |     3|
+|316   |    \outer[19].inner[3].PE_INST   |pe_312     |     6|
+|317   |    \outer[19].inner[4].PE_INST   |pe_313     |     6|
+|318   |    \outer[19].inner[5].PE_INST   |pe_314     |     6|
+|319   |    \outer[19].inner[6].PE_INST   |pe_315     |     6|
+|320   |    \outer[19].inner[7].PE_INST   |pe_316     |     6|
+|321   |    \outer[19].inner[8].PE_INST   |pe_317     |     6|
+|322   |    \outer[19].inner[9].PE_INST   |pe_318     |     6|
+|323   |    \outer[1].inner[10].PE_INST   |pe_319     |     4|
+|324   |    \outer[1].inner[11].PE_INST   |pe_320     |     4|
+|325   |    \outer[1].inner[12].PE_INST   |pe_321     |     4|
+|326   |    \outer[1].inner[13].PE_INST   |pe_322     |     4|
+|327   |    \outer[1].inner[14].PE_INST   |pe_323     |     4|
+|328   |    \outer[1].inner[15].PE_INST   |pe_324     |     4|
+|329   |    \outer[1].inner[16].PE_INST   |pe_325     |     4|
+|330   |    \outer[1].inner[17].PE_INST   |pe_326     |     4|
+|331   |    \outer[1].inner[18].PE_INST   |pe_327     |     4|
+|332   |    \outer[1].inner[19].PE_INST   |pe_328     |     4|
+|333   |    \outer[1].inner[1].PE_INST    |pe_329     |     4|
+|334   |    \outer[1].inner[20].PE_INST   |pe_330     |     4|
+|335   |    \outer[1].inner[21].PE_INST   |pe_331     |     4|
+|336   |    \outer[1].inner[22].PE_INST   |pe_332     |     4|
+|337   |    \outer[1].inner[23].PE_INST   |pe_333     |     4|
+|338   |    \outer[1].inner[24].PE_INST   |pe_334     |     4|
+|339   |    \outer[1].inner[25].PE_INST   |pe_335     |     4|
+|340   |    \outer[1].inner[26].PE_INST   |pe_336     |     4|
+|341   |    \outer[1].inner[27].PE_INST   |pe_337     |     4|
+|342   |    \outer[1].inner[28].PE_INST   |pe_338     |     4|
+|343   |    \outer[1].inner[29].PE_INST   |pe_339     |     4|
+|344   |    \outer[1].inner[2].PE_INST    |pe_340     |     4|
+|345   |    \outer[1].inner[30].PE_INST   |pe_341     |     4|
+|346   |    \outer[1].inner[31].PE_INST   |pe_342     |     2|
+|347   |    \outer[1].inner[32].PE_INST   |pe_343     |     2|
+|348   |    \outer[1].inner[3].PE_INST    |pe_344     |     4|
+|349   |    \outer[1].inner[4].PE_INST    |pe_345     |     4|
+|350   |    \outer[1].inner[5].PE_INST    |pe_346     |     4|
+|351   |    \outer[1].inner[6].PE_INST    |pe_347     |     4|
+|352   |    \outer[1].inner[7].PE_INST    |pe_348     |     4|
+|353   |    \outer[1].inner[8].PE_INST    |pe_349     |     4|
+|354   |    \outer[1].inner[9].PE_INST    |pe_350     |     4|
+|355   |    \outer[20].inner[10].PE_INST  |pe_351     |     6|
+|356   |    \outer[20].inner[11].PE_INST  |pe_352     |     6|
+|357   |    \outer[20].inner[12].PE_INST  |pe_353     |     6|
+|358   |    \outer[20].inner[13].PE_INST  |pe_354     |     6|
+|359   |    \outer[20].inner[14].PE_INST  |pe_355     |     6|
+|360   |    \outer[20].inner[15].PE_INST  |pe_356     |     6|
+|361   |    \outer[20].inner[16].PE_INST  |pe_357     |     6|
+|362   |    \outer[20].inner[17].PE_INST  |pe_358     |     6|
+|363   |    \outer[20].inner[18].PE_INST  |pe_359     |     6|
+|364   |    \outer[20].inner[19].PE_INST  |pe_360     |     6|
+|365   |    \outer[20].inner[1].PE_INST   |pe_361     |     4|
+|366   |    \outer[20].inner[20].PE_INST  |pe_362     |     6|
+|367   |    \outer[20].inner[21].PE_INST  |pe_363     |     6|
+|368   |    \outer[20].inner[22].PE_INST  |pe_364     |     6|
+|369   |    \outer[20].inner[23].PE_INST  |pe_365     |     6|
+|370   |    \outer[20].inner[24].PE_INST  |pe_366     |     6|
+|371   |    \outer[20].inner[25].PE_INST  |pe_367     |     6|
+|372   |    \outer[20].inner[26].PE_INST  |pe_368     |     6|
+|373   |    \outer[20].inner[27].PE_INST  |pe_369     |     6|
+|374   |    \outer[20].inner[28].PE_INST  |pe_370     |     6|
+|375   |    \outer[20].inner[29].PE_INST  |pe_371     |     6|
+|376   |    \outer[20].inner[2].PE_INST   |pe_372     |     5|
+|377   |    \outer[20].inner[30].PE_INST  |pe_373     |     6|
+|378   |    \outer[20].inner[31].PE_INST  |pe_374     |     4|
+|379   |    \outer[20].inner[32].PE_INST  |pe_375     |     3|
+|380   |    \outer[20].inner[3].PE_INST   |pe_376     |     6|
+|381   |    \outer[20].inner[4].PE_INST   |pe_377     |     6|
+|382   |    \outer[20].inner[5].PE_INST   |pe_378     |     6|
+|383   |    \outer[20].inner[6].PE_INST   |pe_379     |     6|
+|384   |    \outer[20].inner[7].PE_INST   |pe_380     |     6|
+|385   |    \outer[20].inner[8].PE_INST   |pe_381     |     6|
+|386   |    \outer[20].inner[9].PE_INST   |pe_382     |     6|
+|387   |    \outer[21].inner[10].PE_INST  |pe_383     |     6|
+|388   |    \outer[21].inner[11].PE_INST  |pe_384     |     6|
+|389   |    \outer[21].inner[12].PE_INST  |pe_385     |     6|
+|390   |    \outer[21].inner[13].PE_INST  |pe_386     |     6|
+|391   |    \outer[21].inner[14].PE_INST  |pe_387     |     6|
+|392   |    \outer[21].inner[15].PE_INST  |pe_388     |     6|
+|393   |    \outer[21].inner[16].PE_INST  |pe_389     |     6|
+|394   |    \outer[21].inner[17].PE_INST  |pe_390     |     6|
+|395   |    \outer[21].inner[18].PE_INST  |pe_391     |     6|
+|396   |    \outer[21].inner[19].PE_INST  |pe_392     |     6|
+|397   |    \outer[21].inner[1].PE_INST   |pe_393     |     4|
+|398   |    \outer[21].inner[20].PE_INST  |pe_394     |     6|
+|399   |    \outer[21].inner[21].PE_INST  |pe_395     |     6|
+|400   |    \outer[21].inner[22].PE_INST  |pe_396     |     6|
+|401   |    \outer[21].inner[23].PE_INST  |pe_397     |     6|
+|402   |    \outer[21].inner[24].PE_INST  |pe_398     |     6|
+|403   |    \outer[21].inner[25].PE_INST  |pe_399     |     6|
+|404   |    \outer[21].inner[26].PE_INST  |pe_400     |     6|
+|405   |    \outer[21].inner[27].PE_INST  |pe_401     |     6|
+|406   |    \outer[21].inner[28].PE_INST  |pe_402     |     6|
+|407   |    \outer[21].inner[29].PE_INST  |pe_403     |     6|
+|408   |    \outer[21].inner[2].PE_INST   |pe_404     |     5|
+|409   |    \outer[21].inner[30].PE_INST  |pe_405     |     6|
+|410   |    \outer[21].inner[31].PE_INST  |pe_406     |     4|
+|411   |    \outer[21].inner[32].PE_INST  |pe_407     |     3|
+|412   |    \outer[21].inner[3].PE_INST   |pe_408     |     6|
+|413   |    \outer[21].inner[4].PE_INST   |pe_409     |     6|
+|414   |    \outer[21].inner[5].PE_INST   |pe_410     |     6|
+|415   |    \outer[21].inner[6].PE_INST   |pe_411     |     6|
+|416   |    \outer[21].inner[7].PE_INST   |pe_412     |     6|
+|417   |    \outer[21].inner[8].PE_INST   |pe_413     |     6|
+|418   |    \outer[21].inner[9].PE_INST   |pe_414     |     6|
+|419   |    \outer[22].inner[10].PE_INST  |pe_415     |     6|
+|420   |    \outer[22].inner[11].PE_INST  |pe_416     |     6|
+|421   |    \outer[22].inner[12].PE_INST  |pe_417     |     6|
+|422   |    \outer[22].inner[13].PE_INST  |pe_418     |     6|
+|423   |    \outer[22].inner[14].PE_INST  |pe_419     |     6|
+|424   |    \outer[22].inner[15].PE_INST  |pe_420     |     6|
+|425   |    \outer[22].inner[16].PE_INST  |pe_421     |     6|
+|426   |    \outer[22].inner[17].PE_INST  |pe_422     |     6|
+|427   |    \outer[22].inner[18].PE_INST  |pe_423     |     6|
+|428   |    \outer[22].inner[19].PE_INST  |pe_424     |     6|
+|429   |    \outer[22].inner[1].PE_INST   |pe_425     |     4|
+|430   |    \outer[22].inner[20].PE_INST  |pe_426     |     6|
+|431   |    \outer[22].inner[21].PE_INST  |pe_427     |     6|
+|432   |    \outer[22].inner[22].PE_INST  |pe_428     |     6|
+|433   |    \outer[22].inner[23].PE_INST  |pe_429     |     6|
+|434   |    \outer[22].inner[24].PE_INST  |pe_430     |     6|
+|435   |    \outer[22].inner[25].PE_INST  |pe_431     |     6|
+|436   |    \outer[22].inner[26].PE_INST  |pe_432     |     6|
+|437   |    \outer[22].inner[27].PE_INST  |pe_433     |     6|
+|438   |    \outer[22].inner[28].PE_INST  |pe_434     |     6|
+|439   |    \outer[22].inner[29].PE_INST  |pe_435     |     6|
+|440   |    \outer[22].inner[2].PE_INST   |pe_436     |     5|
+|441   |    \outer[22].inner[30].PE_INST  |pe_437     |     6|
+|442   |    \outer[22].inner[31].PE_INST  |pe_438     |     4|
+|443   |    \outer[22].inner[32].PE_INST  |pe_439     |     3|
+|444   |    \outer[22].inner[3].PE_INST   |pe_440     |     6|
+|445   |    \outer[22].inner[4].PE_INST   |pe_441     |     6|
+|446   |    \outer[22].inner[5].PE_INST   |pe_442     |     6|
+|447   |    \outer[22].inner[6].PE_INST   |pe_443     |     6|
+|448   |    \outer[22].inner[7].PE_INST   |pe_444     |     6|
+|449   |    \outer[22].inner[8].PE_INST   |pe_445     |     6|
+|450   |    \outer[22].inner[9].PE_INST   |pe_446     |     6|
+|451   |    \outer[23].inner[10].PE_INST  |pe_447     |     6|
+|452   |    \outer[23].inner[11].PE_INST  |pe_448     |     6|
+|453   |    \outer[23].inner[12].PE_INST  |pe_449     |     6|
+|454   |    \outer[23].inner[13].PE_INST  |pe_450     |     6|
+|455   |    \outer[23].inner[14].PE_INST  |pe_451     |     6|
+|456   |    \outer[23].inner[15].PE_INST  |pe_452     |     6|
+|457   |    \outer[23].inner[16].PE_INST  |pe_453     |     6|
+|458   |    \outer[23].inner[17].PE_INST  |pe_454     |     6|
+|459   |    \outer[23].inner[18].PE_INST  |pe_455     |     6|
+|460   |    \outer[23].inner[19].PE_INST  |pe_456     |     6|
+|461   |    \outer[23].inner[1].PE_INST   |pe_457     |     4|
+|462   |    \outer[23].inner[20].PE_INST  |pe_458     |     6|
+|463   |    \outer[23].inner[21].PE_INST  |pe_459     |     6|
+|464   |    \outer[23].inner[22].PE_INST  |pe_460     |     6|
+|465   |    \outer[23].inner[23].PE_INST  |pe_461     |     6|
+|466   |    \outer[23].inner[24].PE_INST  |pe_462     |     6|
+|467   |    \outer[23].inner[25].PE_INST  |pe_463     |     6|
+|468   |    \outer[23].inner[26].PE_INST  |pe_464     |     6|
+|469   |    \outer[23].inner[27].PE_INST  |pe_465     |     6|
+|470   |    \outer[23].inner[28].PE_INST  |pe_466     |     6|
+|471   |    \outer[23].inner[29].PE_INST  |pe_467     |     6|
+|472   |    \outer[23].inner[2].PE_INST   |pe_468     |     5|
+|473   |    \outer[23].inner[30].PE_INST  |pe_469     |     6|
+|474   |    \outer[23].inner[31].PE_INST  |pe_470     |     4|
+|475   |    \outer[23].inner[32].PE_INST  |pe_471     |     3|
+|476   |    \outer[23].inner[3].PE_INST   |pe_472     |     6|
+|477   |    \outer[23].inner[4].PE_INST   |pe_473     |     6|
+|478   |    \outer[23].inner[5].PE_INST   |pe_474     |     6|
+|479   |    \outer[23].inner[6].PE_INST   |pe_475     |     6|
+|480   |    \outer[23].inner[7].PE_INST   |pe_476     |     6|
+|481   |    \outer[23].inner[8].PE_INST   |pe_477     |     6|
+|482   |    \outer[23].inner[9].PE_INST   |pe_478     |     6|
+|483   |    \outer[24].inner[10].PE_INST  |pe_479     |     6|
+|484   |    \outer[24].inner[11].PE_INST  |pe_480     |     6|
+|485   |    \outer[24].inner[12].PE_INST  |pe_481     |     6|
+|486   |    \outer[24].inner[13].PE_INST  |pe_482     |     6|
+|487   |    \outer[24].inner[14].PE_INST  |pe_483     |     6|
+|488   |    \outer[24].inner[15].PE_INST  |pe_484     |     6|
+|489   |    \outer[24].inner[16].PE_INST  |pe_485     |     6|
+|490   |    \outer[24].inner[17].PE_INST  |pe_486     |     6|
+|491   |    \outer[24].inner[18].PE_INST  |pe_487     |     6|
+|492   |    \outer[24].inner[19].PE_INST  |pe_488     |     6|
+|493   |    \outer[24].inner[1].PE_INST   |pe_489     |     4|
+|494   |    \outer[24].inner[20].PE_INST  |pe_490     |     6|
+|495   |    \outer[24].inner[21].PE_INST  |pe_491     |     6|
+|496   |    \outer[24].inner[22].PE_INST  |pe_492     |     6|
+|497   |    \outer[24].inner[23].PE_INST  |pe_493     |     6|
+|498   |    \outer[24].inner[24].PE_INST  |pe_494     |     6|
+|499   |    \outer[24].inner[25].PE_INST  |pe_495     |     6|
+|500   |    \outer[24].inner[26].PE_INST  |pe_496     |     6|
+|501   |    \outer[24].inner[27].PE_INST  |pe_497     |     6|
+|502   |    \outer[24].inner[28].PE_INST  |pe_498     |     6|
+|503   |    \outer[24].inner[29].PE_INST  |pe_499     |     6|
+|504   |    \outer[24].inner[2].PE_INST   |pe_500     |     5|
+|505   |    \outer[24].inner[30].PE_INST  |pe_501     |     6|
+|506   |    \outer[24].inner[31].PE_INST  |pe_502     |     4|
+|507   |    \outer[24].inner[32].PE_INST  |pe_503     |     3|
+|508   |    \outer[24].inner[3].PE_INST   |pe_504     |     6|
+|509   |    \outer[24].inner[4].PE_INST   |pe_505     |     6|
+|510   |    \outer[24].inner[5].PE_INST   |pe_506     |     6|
+|511   |    \outer[24].inner[6].PE_INST   |pe_507     |     6|
+|512   |    \outer[24].inner[7].PE_INST   |pe_508     |     6|
+|513   |    \outer[24].inner[8].PE_INST   |pe_509     |     6|
+|514   |    \outer[24].inner[9].PE_INST   |pe_510     |     6|
+|515   |    \outer[25].inner[10].PE_INST  |pe_511     |     6|
+|516   |    \outer[25].inner[11].PE_INST  |pe_512     |     6|
+|517   |    \outer[25].inner[12].PE_INST  |pe_513     |     6|
+|518   |    \outer[25].inner[13].PE_INST  |pe_514     |     6|
+|519   |    \outer[25].inner[14].PE_INST  |pe_515     |     6|
+|520   |    \outer[25].inner[15].PE_INST  |pe_516     |     6|
+|521   |    \outer[25].inner[16].PE_INST  |pe_517     |     6|
+|522   |    \outer[25].inner[17].PE_INST  |pe_518     |     6|
+|523   |    \outer[25].inner[18].PE_INST  |pe_519     |     6|
+|524   |    \outer[25].inner[19].PE_INST  |pe_520     |     6|
+|525   |    \outer[25].inner[1].PE_INST   |pe_521     |     4|
+|526   |    \outer[25].inner[20].PE_INST  |pe_522     |     6|
+|527   |    \outer[25].inner[21].PE_INST  |pe_523     |     6|
+|528   |    \outer[25].inner[22].PE_INST  |pe_524     |     6|
+|529   |    \outer[25].inner[23].PE_INST  |pe_525     |     6|
+|530   |    \outer[25].inner[24].PE_INST  |pe_526     |     6|
+|531   |    \outer[25].inner[25].PE_INST  |pe_527     |     6|
+|532   |    \outer[25].inner[26].PE_INST  |pe_528     |     6|
+|533   |    \outer[25].inner[27].PE_INST  |pe_529     |     6|
+|534   |    \outer[25].inner[28].PE_INST  |pe_530     |     6|
+|535   |    \outer[25].inner[29].PE_INST  |pe_531     |     6|
+|536   |    \outer[25].inner[2].PE_INST   |pe_532     |     5|
+|537   |    \outer[25].inner[30].PE_INST  |pe_533     |     6|
+|538   |    \outer[25].inner[31].PE_INST  |pe_534     |     4|
+|539   |    \outer[25].inner[32].PE_INST  |pe_535     |     3|
+|540   |    \outer[25].inner[3].PE_INST   |pe_536     |     6|
+|541   |    \outer[25].inner[4].PE_INST   |pe_537     |     6|
+|542   |    \outer[25].inner[5].PE_INST   |pe_538     |     6|
+|543   |    \outer[25].inner[6].PE_INST   |pe_539     |     6|
+|544   |    \outer[25].inner[7].PE_INST   |pe_540     |     6|
+|545   |    \outer[25].inner[8].PE_INST   |pe_541     |     6|
+|546   |    \outer[25].inner[9].PE_INST   |pe_542     |     6|
+|547   |    \outer[26].inner[10].PE_INST  |pe_543     |     6|
+|548   |    \outer[26].inner[11].PE_INST  |pe_544     |     6|
+|549   |    \outer[26].inner[12].PE_INST  |pe_545     |     6|
+|550   |    \outer[26].inner[13].PE_INST  |pe_546     |     6|
+|551   |    \outer[26].inner[14].PE_INST  |pe_547     |     6|
+|552   |    \outer[26].inner[15].PE_INST  |pe_548     |     6|
+|553   |    \outer[26].inner[16].PE_INST  |pe_549     |     6|
+|554   |    \outer[26].inner[17].PE_INST  |pe_550     |     6|
+|555   |    \outer[26].inner[18].PE_INST  |pe_551     |     6|
+|556   |    \outer[26].inner[19].PE_INST  |pe_552     |     6|
+|557   |    \outer[26].inner[1].PE_INST   |pe_553     |     4|
+|558   |    \outer[26].inner[20].PE_INST  |pe_554     |     6|
+|559   |    \outer[26].inner[21].PE_INST  |pe_555     |     6|
+|560   |    \outer[26].inner[22].PE_INST  |pe_556     |     6|
+|561   |    \outer[26].inner[23].PE_INST  |pe_557     |     6|
+|562   |    \outer[26].inner[24].PE_INST  |pe_558     |     6|
+|563   |    \outer[26].inner[25].PE_INST  |pe_559     |     6|
+|564   |    \outer[26].inner[26].PE_INST  |pe_560     |     6|
+|565   |    \outer[26].inner[27].PE_INST  |pe_561     |     6|
+|566   |    \outer[26].inner[28].PE_INST  |pe_562     |     6|
+|567   |    \outer[26].inner[29].PE_INST  |pe_563     |     6|
+|568   |    \outer[26].inner[2].PE_INST   |pe_564     |     5|
+|569   |    \outer[26].inner[30].PE_INST  |pe_565     |     6|
+|570   |    \outer[26].inner[31].PE_INST  |pe_566     |     4|
+|571   |    \outer[26].inner[32].PE_INST  |pe_567     |     3|
+|572   |    \outer[26].inner[3].PE_INST   |pe_568     |     6|
+|573   |    \outer[26].inner[4].PE_INST   |pe_569     |     6|
+|574   |    \outer[26].inner[5].PE_INST   |pe_570     |     6|
+|575   |    \outer[26].inner[6].PE_INST   |pe_571     |     6|
+|576   |    \outer[26].inner[7].PE_INST   |pe_572     |     6|
+|577   |    \outer[26].inner[8].PE_INST   |pe_573     |     6|
+|578   |    \outer[26].inner[9].PE_INST   |pe_574     |     6|
+|579   |    \outer[27].inner[10].PE_INST  |pe_575     |     6|
+|580   |    \outer[27].inner[11].PE_INST  |pe_576     |     6|
+|581   |    \outer[27].inner[12].PE_INST  |pe_577     |     6|
+|582   |    \outer[27].inner[13].PE_INST  |pe_578     |     6|
+|583   |    \outer[27].inner[14].PE_INST  |pe_579     |     6|
+|584   |    \outer[27].inner[15].PE_INST  |pe_580     |     6|
+|585   |    \outer[27].inner[16].PE_INST  |pe_581     |     6|
+|586   |    \outer[27].inner[17].PE_INST  |pe_582     |     6|
+|587   |    \outer[27].inner[18].PE_INST  |pe_583     |     6|
+|588   |    \outer[27].inner[19].PE_INST  |pe_584     |     6|
+|589   |    \outer[27].inner[1].PE_INST   |pe_585     |     4|
+|590   |    \outer[27].inner[20].PE_INST  |pe_586     |     6|
+|591   |    \outer[27].inner[21].PE_INST  |pe_587     |     6|
+|592   |    \outer[27].inner[22].PE_INST  |pe_588     |     6|
+|593   |    \outer[27].inner[23].PE_INST  |pe_589     |     6|
+|594   |    \outer[27].inner[24].PE_INST  |pe_590     |     6|
+|595   |    \outer[27].inner[25].PE_INST  |pe_591     |     6|
+|596   |    \outer[27].inner[26].PE_INST  |pe_592     |     6|
+|597   |    \outer[27].inner[27].PE_INST  |pe_593     |     6|
+|598   |    \outer[27].inner[28].PE_INST  |pe_594     |     6|
+|599   |    \outer[27].inner[29].PE_INST  |pe_595     |     6|
+|600   |    \outer[27].inner[2].PE_INST   |pe_596     |     5|
+|601   |    \outer[27].inner[30].PE_INST  |pe_597     |     6|
+|602   |    \outer[27].inner[31].PE_INST  |pe_598     |     4|
+|603   |    \outer[27].inner[32].PE_INST  |pe_599     |     3|
+|604   |    \outer[27].inner[3].PE_INST   |pe_600     |     6|
+|605   |    \outer[27].inner[4].PE_INST   |pe_601     |     6|
+|606   |    \outer[27].inner[5].PE_INST   |pe_602     |     6|
+|607   |    \outer[27].inner[6].PE_INST   |pe_603     |     6|
+|608   |    \outer[27].inner[7].PE_INST   |pe_604     |     6|
+|609   |    \outer[27].inner[8].PE_INST   |pe_605     |     6|
+|610   |    \outer[27].inner[9].PE_INST   |pe_606     |     6|
+|611   |    \outer[28].inner[10].PE_INST  |pe_607     |     6|
+|612   |    \outer[28].inner[11].PE_INST  |pe_608     |     6|
+|613   |    \outer[28].inner[12].PE_INST  |pe_609     |     6|
+|614   |    \outer[28].inner[13].PE_INST  |pe_610     |     6|
+|615   |    \outer[28].inner[14].PE_INST  |pe_611     |     6|
+|616   |    \outer[28].inner[15].PE_INST  |pe_612     |     6|
+|617   |    \outer[28].inner[16].PE_INST  |pe_613     |     6|
+|618   |    \outer[28].inner[17].PE_INST  |pe_614     |     6|
+|619   |    \outer[28].inner[18].PE_INST  |pe_615     |     6|
+|620   |    \outer[28].inner[19].PE_INST  |pe_616     |     6|
+|621   |    \outer[28].inner[1].PE_INST   |pe_617     |     4|
+|622   |    \outer[28].inner[20].PE_INST  |pe_618     |     6|
+|623   |    \outer[28].inner[21].PE_INST  |pe_619     |     6|
+|624   |    \outer[28].inner[22].PE_INST  |pe_620     |     6|
+|625   |    \outer[28].inner[23].PE_INST  |pe_621     |     6|
+|626   |    \outer[28].inner[24].PE_INST  |pe_622     |     6|
+|627   |    \outer[28].inner[25].PE_INST  |pe_623     |     6|
+|628   |    \outer[28].inner[26].PE_INST  |pe_624     |     6|
+|629   |    \outer[28].inner[27].PE_INST  |pe_625     |     6|
+|630   |    \outer[28].inner[28].PE_INST  |pe_626     |     6|
+|631   |    \outer[28].inner[29].PE_INST  |pe_627     |     6|
+|632   |    \outer[28].inner[2].PE_INST   |pe_628     |     5|
+|633   |    \outer[28].inner[30].PE_INST  |pe_629     |     6|
+|634   |    \outer[28].inner[31].PE_INST  |pe_630     |     4|
+|635   |    \outer[28].inner[32].PE_INST  |pe_631     |     3|
+|636   |    \outer[28].inner[3].PE_INST   |pe_632     |     6|
+|637   |    \outer[28].inner[4].PE_INST   |pe_633     |     6|
+|638   |    \outer[28].inner[5].PE_INST   |pe_634     |     6|
+|639   |    \outer[28].inner[6].PE_INST   |pe_635     |     6|
+|640   |    \outer[28].inner[7].PE_INST   |pe_636     |     6|
+|641   |    \outer[28].inner[8].PE_INST   |pe_637     |     6|
+|642   |    \outer[28].inner[9].PE_INST   |pe_638     |     6|
+|643   |    \outer[29].inner[10].PE_INST  |pe_639     |     6|
+|644   |    \outer[29].inner[11].PE_INST  |pe_640     |     6|
+|645   |    \outer[29].inner[12].PE_INST  |pe_641     |     6|
+|646   |    \outer[29].inner[13].PE_INST  |pe_642     |     6|
+|647   |    \outer[29].inner[14].PE_INST  |pe_643     |     6|
+|648   |    \outer[29].inner[15].PE_INST  |pe_644     |     6|
+|649   |    \outer[29].inner[16].PE_INST  |pe_645     |     6|
+|650   |    \outer[29].inner[17].PE_INST  |pe_646     |     6|
+|651   |    \outer[29].inner[18].PE_INST  |pe_647     |     6|
+|652   |    \outer[29].inner[19].PE_INST  |pe_648     |     6|
+|653   |    \outer[29].inner[1].PE_INST   |pe_649     |     4|
+|654   |    \outer[29].inner[20].PE_INST  |pe_650     |     6|
+|655   |    \outer[29].inner[21].PE_INST  |pe_651     |     6|
+|656   |    \outer[29].inner[22].PE_INST  |pe_652     |     6|
+|657   |    \outer[29].inner[23].PE_INST  |pe_653     |     6|
+|658   |    \outer[29].inner[24].PE_INST  |pe_654     |     6|
+|659   |    \outer[29].inner[25].PE_INST  |pe_655     |     6|
+|660   |    \outer[29].inner[26].PE_INST  |pe_656     |     6|
+|661   |    \outer[29].inner[27].PE_INST  |pe_657     |     6|
+|662   |    \outer[29].inner[28].PE_INST  |pe_658     |     6|
+|663   |    \outer[29].inner[29].PE_INST  |pe_659     |     6|
+|664   |    \outer[29].inner[2].PE_INST   |pe_660     |     5|
+|665   |    \outer[29].inner[30].PE_INST  |pe_661     |     6|
+|666   |    \outer[29].inner[31].PE_INST  |pe_662     |     4|
+|667   |    \outer[29].inner[32].PE_INST  |pe_663     |     3|
+|668   |    \outer[29].inner[3].PE_INST   |pe_664     |     6|
+|669   |    \outer[29].inner[4].PE_INST   |pe_665     |     6|
+|670   |    \outer[29].inner[5].PE_INST   |pe_666     |     6|
+|671   |    \outer[29].inner[6].PE_INST   |pe_667     |     6|
+|672   |    \outer[29].inner[7].PE_INST   |pe_668     |     6|
+|673   |    \outer[29].inner[8].PE_INST   |pe_669     |     6|
+|674   |    \outer[29].inner[9].PE_INST   |pe_670     |     6|
+|675   |    \outer[2].inner[10].PE_INST   |pe_671     |     4|
+|676   |    \outer[2].inner[11].PE_INST   |pe_672     |     4|
+|677   |    \outer[2].inner[12].PE_INST   |pe_673     |     4|
+|678   |    \outer[2].inner[13].PE_INST   |pe_674     |     4|
+|679   |    \outer[2].inner[14].PE_INST   |pe_675     |     4|
+|680   |    \outer[2].inner[15].PE_INST   |pe_676     |     4|
+|681   |    \outer[2].inner[16].PE_INST   |pe_677     |     4|
+|682   |    \outer[2].inner[17].PE_INST   |pe_678     |     4|
+|683   |    \outer[2].inner[18].PE_INST   |pe_679     |     4|
+|684   |    \outer[2].inner[19].PE_INST   |pe_680     |     4|
+|685   |    \outer[2].inner[1].PE_INST    |pe_681     |     4|
+|686   |    \outer[2].inner[20].PE_INST   |pe_682     |     4|
+|687   |    \outer[2].inner[21].PE_INST   |pe_683     |     4|
+|688   |    \outer[2].inner[22].PE_INST   |pe_684     |     4|
+|689   |    \outer[2].inner[23].PE_INST   |pe_685     |     4|
+|690   |    \outer[2].inner[24].PE_INST   |pe_686     |     4|
+|691   |    \outer[2].inner[25].PE_INST   |pe_687     |     4|
+|692   |    \outer[2].inner[26].PE_INST   |pe_688     |     4|
+|693   |    \outer[2].inner[27].PE_INST   |pe_689     |     4|
+|694   |    \outer[2].inner[28].PE_INST   |pe_690     |     4|
+|695   |    \outer[2].inner[29].PE_INST   |pe_691     |     4|
+|696   |    \outer[2].inner[2].PE_INST    |pe_692     |     3|
+|697   |    \outer[2].inner[30].PE_INST   |pe_693     |     4|
+|698   |    \outer[2].inner[31].PE_INST   |pe_694     |     2|
+|699   |    \outer[2].inner[32].PE_INST   |pe_695     |     3|
+|700   |    \outer[2].inner[3].PE_INST    |pe_696     |     4|
+|701   |    \outer[2].inner[4].PE_INST    |pe_697     |     4|
+|702   |    \outer[2].inner[5].PE_INST    |pe_698     |     4|
+|703   |    \outer[2].inner[6].PE_INST    |pe_699     |     4|
+|704   |    \outer[2].inner[7].PE_INST    |pe_700     |     4|
+|705   |    \outer[2].inner[8].PE_INST    |pe_701     |     4|
+|706   |    \outer[2].inner[9].PE_INST    |pe_702     |     4|
+|707   |    \outer[30].inner[10].PE_INST  |pe_703     |     6|
+|708   |    \outer[30].inner[11].PE_INST  |pe_704     |     6|
+|709   |    \outer[30].inner[12].PE_INST  |pe_705     |     6|
+|710   |    \outer[30].inner[13].PE_INST  |pe_706     |     6|
+|711   |    \outer[30].inner[14].PE_INST  |pe_707     |     6|
+|712   |    \outer[30].inner[15].PE_INST  |pe_708     |     6|
+|713   |    \outer[30].inner[16].PE_INST  |pe_709     |     6|
+|714   |    \outer[30].inner[17].PE_INST  |pe_710     |     6|
+|715   |    \outer[30].inner[18].PE_INST  |pe_711     |     6|
+|716   |    \outer[30].inner[19].PE_INST  |pe_712     |     6|
+|717   |    \outer[30].inner[1].PE_INST   |pe_713     |     4|
+|718   |    \outer[30].inner[20].PE_INST  |pe_714     |     6|
+|719   |    \outer[30].inner[21].PE_INST  |pe_715     |     6|
+|720   |    \outer[30].inner[22].PE_INST  |pe_716     |     6|
+|721   |    \outer[30].inner[23].PE_INST  |pe_717     |     6|
+|722   |    \outer[30].inner[24].PE_INST  |pe_718     |     6|
+|723   |    \outer[30].inner[25].PE_INST  |pe_719     |     6|
+|724   |    \outer[30].inner[26].PE_INST  |pe_720     |     6|
+|725   |    \outer[30].inner[27].PE_INST  |pe_721     |     6|
+|726   |    \outer[30].inner[28].PE_INST  |pe_722     |     6|
+|727   |    \outer[30].inner[29].PE_INST  |pe_723     |     6|
+|728   |    \outer[30].inner[2].PE_INST   |pe_724     |     5|
+|729   |    \outer[30].inner[30].PE_INST  |pe_725     |     6|
+|730   |    \outer[30].inner[31].PE_INST  |pe_726     |     4|
+|731   |    \outer[30].inner[32].PE_INST  |pe_727     |     3|
+|732   |    \outer[30].inner[3].PE_INST   |pe_728     |     6|
+|733   |    \outer[30].inner[4].PE_INST   |pe_729     |     6|
+|734   |    \outer[30].inner[5].PE_INST   |pe_730     |     6|
+|735   |    \outer[30].inner[6].PE_INST   |pe_731     |     6|
+|736   |    \outer[30].inner[7].PE_INST   |pe_732     |     6|
+|737   |    \outer[30].inner[8].PE_INST   |pe_733     |     6|
+|738   |    \outer[30].inner[9].PE_INST   |pe_734     |     6|
+|739   |    \outer[31].inner[10].PE_INST  |pe_735     |     4|
+|740   |    \outer[31].inner[11].PE_INST  |pe_736     |     4|
+|741   |    \outer[31].inner[12].PE_INST  |pe_737     |     4|
+|742   |    \outer[31].inner[13].PE_INST  |pe_738     |     4|
+|743   |    \outer[31].inner[14].PE_INST  |pe_739     |     4|
+|744   |    \outer[31].inner[15].PE_INST  |pe_740     |     4|
+|745   |    \outer[31].inner[16].PE_INST  |pe_741     |     4|
+|746   |    \outer[31].inner[17].PE_INST  |pe_742     |     4|
+|747   |    \outer[31].inner[18].PE_INST  |pe_743     |     4|
+|748   |    \outer[31].inner[19].PE_INST  |pe_744     |     4|
+|749   |    \outer[31].inner[1].PE_INST   |pe_745     |     2|
+|750   |    \outer[31].inner[20].PE_INST  |pe_746     |     4|
+|751   |    \outer[31].inner[21].PE_INST  |pe_747     |     4|
+|752   |    \outer[31].inner[22].PE_INST  |pe_748     |     4|
+|753   |    \outer[31].inner[23].PE_INST  |pe_749     |     4|
+|754   |    \outer[31].inner[24].PE_INST  |pe_750     |     4|
+|755   |    \outer[31].inner[25].PE_INST  |pe_751     |     4|
+|756   |    \outer[31].inner[26].PE_INST  |pe_752     |     4|
+|757   |    \outer[31].inner[27].PE_INST  |pe_753     |     4|
+|758   |    \outer[31].inner[28].PE_INST  |pe_754     |     4|
+|759   |    \outer[31].inner[29].PE_INST  |pe_755     |     4|
+|760   |    \outer[31].inner[2].PE_INST   |pe_756     |     3|
+|761   |    \outer[31].inner[30].PE_INST  |pe_757     |     4|
+|762   |    \outer[31].inner[31].PE_INST  |pe_758     |     4|
+|763   |    \outer[31].inner[32].PE_INST  |pe_759     |     3|
+|764   |    \outer[31].inner[3].PE_INST   |pe_760     |     4|
+|765   |    \outer[31].inner[4].PE_INST   |pe_761     |     4|
+|766   |    \outer[31].inner[5].PE_INST   |pe_762     |     4|
+|767   |    \outer[31].inner[6].PE_INST   |pe_763     |     4|
+|768   |    \outer[31].inner[7].PE_INST   |pe_764     |     4|
+|769   |    \outer[31].inner[8].PE_INST   |pe_765     |     4|
+|770   |    \outer[31].inner[9].PE_INST   |pe_766     |     4|
+|771   |    \outer[32].inner[10].PE_INST  |pe_767     |     4|
+|772   |    \outer[32].inner[11].PE_INST  |pe_768     |     4|
+|773   |    \outer[32].inner[12].PE_INST  |pe_769     |     4|
+|774   |    \outer[32].inner[13].PE_INST  |pe_770     |     4|
+|775   |    \outer[32].inner[14].PE_INST  |pe_771     |     4|
+|776   |    \outer[32].inner[15].PE_INST  |pe_772     |     4|
+|777   |    \outer[32].inner[16].PE_INST  |pe_773     |     4|
+|778   |    \outer[32].inner[17].PE_INST  |pe_774     |     4|
+|779   |    \outer[32].inner[18].PE_INST  |pe_775     |     4|
+|780   |    \outer[32].inner[19].PE_INST  |pe_776     |     4|
+|781   |    \outer[32].inner[1].PE_INST   |pe_777     |     2|
+|782   |    \outer[32].inner[20].PE_INST  |pe_778     |     4|
+|783   |    \outer[32].inner[21].PE_INST  |pe_779     |     4|
+|784   |    \outer[32].inner[22].PE_INST  |pe_780     |     4|
+|785   |    \outer[32].inner[23].PE_INST  |pe_781     |     4|
+|786   |    \outer[32].inner[24].PE_INST  |pe_782     |     4|
+|787   |    \outer[32].inner[25].PE_INST  |pe_783     |     4|
+|788   |    \outer[32].inner[26].PE_INST  |pe_784     |     4|
+|789   |    \outer[32].inner[27].PE_INST  |pe_785     |     4|
+|790   |    \outer[32].inner[28].PE_INST  |pe_786     |     4|
+|791   |    \outer[32].inner[29].PE_INST  |pe_787     |     4|
+|792   |    \outer[32].inner[2].PE_INST   |pe_788     |     4|
+|793   |    \outer[32].inner[30].PE_INST  |pe_789     |     4|
+|794   |    \outer[32].inner[31].PE_INST  |pe_790     |     4|
+|795   |    \outer[32].inner[32].PE_INST  |pe_791     |     2|
+|796   |    \outer[32].inner[3].PE_INST   |pe_792     |     4|
+|797   |    \outer[32].inner[4].PE_INST   |pe_793     |     4|
+|798   |    \outer[32].inner[5].PE_INST   |pe_794     |     4|
+|799   |    \outer[32].inner[6].PE_INST   |pe_795     |     4|
+|800   |    \outer[32].inner[7].PE_INST   |pe_796     |     4|
+|801   |    \outer[32].inner[8].PE_INST   |pe_797     |     4|
+|802   |    \outer[32].inner[9].PE_INST   |pe_798     |     4|
+|803   |    \outer[3].inner[10].PE_INST   |pe_799     |     9|
+|804   |    \outer[3].inner[11].PE_INST   |pe_800     |     9|
+|805   |    \outer[3].inner[12].PE_INST   |pe_801     |     9|
+|806   |    \outer[3].inner[13].PE_INST   |pe_802     |     9|
+|807   |    \outer[3].inner[14].PE_INST   |pe_803     |     9|
+|808   |    \outer[3].inner[15].PE_INST   |pe_804     |     9|
+|809   |    \outer[3].inner[16].PE_INST   |pe_805     |     9|
+|810   |    \outer[3].inner[17].PE_INST   |pe_806     |     9|
+|811   |    \outer[3].inner[18].PE_INST   |pe_807     |     9|
+|812   |    \outer[3].inner[19].PE_INST   |pe_808     |     9|
+|813   |    \outer[3].inner[1].PE_INST    |pe_809     |     7|
+|814   |    \outer[3].inner[20].PE_INST   |pe_810     |     9|
+|815   |    \outer[3].inner[21].PE_INST   |pe_811     |     9|
+|816   |    \outer[3].inner[22].PE_INST   |pe_812     |     9|
+|817   |    \outer[3].inner[23].PE_INST   |pe_813     |     9|
+|818   |    \outer[3].inner[24].PE_INST   |pe_814     |     9|
+|819   |    \outer[3].inner[25].PE_INST   |pe_815     |     9|
+|820   |    \outer[3].inner[26].PE_INST   |pe_816     |     9|
+|821   |    \outer[3].inner[27].PE_INST   |pe_817     |     9|
+|822   |    \outer[3].inner[28].PE_INST   |pe_818     |     9|
+|823   |    \outer[3].inner[29].PE_INST   |pe_819     |     9|
+|824   |    \outer[3].inner[2].PE_INST    |pe_820     |     8|
+|825   |    \outer[3].inner[30].PE_INST   |pe_821     |     9|
+|826   |    \outer[3].inner[31].PE_INST   |pe_822     |     7|
+|827   |    \outer[3].inner[32].PE_INST   |pe_823     |     3|
+|828   |    \outer[3].inner[3].PE_INST    |pe_824     |     9|
+|829   |    \outer[3].inner[4].PE_INST    |pe_825     |     9|
+|830   |    \outer[3].inner[5].PE_INST    |pe_826     |     9|
+|831   |    \outer[3].inner[6].PE_INST    |pe_827     |     9|
+|832   |    \outer[3].inner[7].PE_INST    |pe_828     |     9|
+|833   |    \outer[3].inner[8].PE_INST    |pe_829     |     9|
+|834   |    \outer[3].inner[9].PE_INST    |pe_830     |     9|
+|835   |    \outer[4].inner[10].PE_INST   |pe_831     |     6|
+|836   |    \outer[4].inner[11].PE_INST   |pe_832     |     6|
+|837   |    \outer[4].inner[12].PE_INST   |pe_833     |     6|
+|838   |    \outer[4].inner[13].PE_INST   |pe_834     |     6|
+|839   |    \outer[4].inner[14].PE_INST   |pe_835     |     6|
+|840   |    \outer[4].inner[15].PE_INST   |pe_836     |     6|
+|841   |    \outer[4].inner[16].PE_INST   |pe_837     |     6|
+|842   |    \outer[4].inner[17].PE_INST   |pe_838     |     6|
+|843   |    \outer[4].inner[18].PE_INST   |pe_839     |     6|
+|844   |    \outer[4].inner[19].PE_INST   |pe_840     |     6|
+|845   |    \outer[4].inner[1].PE_INST    |pe_841     |     4|
+|846   |    \outer[4].inner[20].PE_INST   |pe_842     |     6|
+|847   |    \outer[4].inner[21].PE_INST   |pe_843     |     6|
+|848   |    \outer[4].inner[22].PE_INST   |pe_844     |     6|
+|849   |    \outer[4].inner[23].PE_INST   |pe_845     |     6|
+|850   |    \outer[4].inner[24].PE_INST   |pe_846     |     6|
+|851   |    \outer[4].inner[25].PE_INST   |pe_847     |     6|
+|852   |    \outer[4].inner[26].PE_INST   |pe_848     |     6|
+|853   |    \outer[4].inner[27].PE_INST   |pe_849     |     6|
+|854   |    \outer[4].inner[28].PE_INST   |pe_850     |     6|
+|855   |    \outer[4].inner[29].PE_INST   |pe_851     |     6|
+|856   |    \outer[4].inner[2].PE_INST    |pe_852     |     5|
+|857   |    \outer[4].inner[30].PE_INST   |pe_853     |     6|
+|858   |    \outer[4].inner[31].PE_INST   |pe_854     |     4|
+|859   |    \outer[4].inner[32].PE_INST   |pe_855     |     3|
+|860   |    \outer[4].inner[3].PE_INST    |pe_856     |     6|
+|861   |    \outer[4].inner[4].PE_INST    |pe_857     |     6|
+|862   |    \outer[4].inner[5].PE_INST    |pe_858     |     6|
+|863   |    \outer[4].inner[6].PE_INST    |pe_859     |     6|
+|864   |    \outer[4].inner[7].PE_INST    |pe_860     |     6|
+|865   |    \outer[4].inner[8].PE_INST    |pe_861     |     6|
+|866   |    \outer[4].inner[9].PE_INST    |pe_862     |     6|
+|867   |    \outer[5].inner[10].PE_INST   |pe_863     |     6|
+|868   |    \outer[5].inner[11].PE_INST   |pe_864     |     6|
+|869   |    \outer[5].inner[12].PE_INST   |pe_865     |     6|
+|870   |    \outer[5].inner[13].PE_INST   |pe_866     |     6|
+|871   |    \outer[5].inner[14].PE_INST   |pe_867     |     6|
+|872   |    \outer[5].inner[15].PE_INST   |pe_868     |     6|
+|873   |    \outer[5].inner[16].PE_INST   |pe_869     |     6|
+|874   |    \outer[5].inner[17].PE_INST   |pe_870     |     6|
+|875   |    \outer[5].inner[18].PE_INST   |pe_871     |     6|
+|876   |    \outer[5].inner[19].PE_INST   |pe_872     |     6|
+|877   |    \outer[5].inner[1].PE_INST    |pe_873     |     4|
+|878   |    \outer[5].inner[20].PE_INST   |pe_874     |     6|
+|879   |    \outer[5].inner[21].PE_INST   |pe_875     |     6|
+|880   |    \outer[5].inner[22].PE_INST   |pe_876     |     6|
+|881   |    \outer[5].inner[23].PE_INST   |pe_877     |     6|
+|882   |    \outer[5].inner[24].PE_INST   |pe_878     |     6|
+|883   |    \outer[5].inner[25].PE_INST   |pe_879     |     6|
+|884   |    \outer[5].inner[26].PE_INST   |pe_880     |     6|
+|885   |    \outer[5].inner[27].PE_INST   |pe_881     |     6|
+|886   |    \outer[5].inner[28].PE_INST   |pe_882     |     6|
+|887   |    \outer[5].inner[29].PE_INST   |pe_883     |     6|
+|888   |    \outer[5].inner[2].PE_INST    |pe_884     |     5|
+|889   |    \outer[5].inner[30].PE_INST   |pe_885     |     6|
+|890   |    \outer[5].inner[31].PE_INST   |pe_886     |     4|
+|891   |    \outer[5].inner[32].PE_INST   |pe_887     |     3|
+|892   |    \outer[5].inner[3].PE_INST    |pe_888     |     6|
+|893   |    \outer[5].inner[4].PE_INST    |pe_889     |     6|
+|894   |    \outer[5].inner[5].PE_INST    |pe_890     |     6|
+|895   |    \outer[5].inner[6].PE_INST    |pe_891     |     6|
+|896   |    \outer[5].inner[7].PE_INST    |pe_892     |     6|
+|897   |    \outer[5].inner[8].PE_INST    |pe_893     |     6|
+|898   |    \outer[5].inner[9].PE_INST    |pe_894     |     6|
+|899   |    \outer[6].inner[10].PE_INST   |pe_895     |     6|
+|900   |    \outer[6].inner[11].PE_INST   |pe_896     |     6|
+|901   |    \outer[6].inner[12].PE_INST   |pe_897     |     6|
+|902   |    \outer[6].inner[13].PE_INST   |pe_898     |     6|
+|903   |    \outer[6].inner[14].PE_INST   |pe_899     |     6|
+|904   |    \outer[6].inner[15].PE_INST   |pe_900     |     6|
+|905   |    \outer[6].inner[16].PE_INST   |pe_901     |     6|
+|906   |    \outer[6].inner[17].PE_INST   |pe_902     |     6|
+|907   |    \outer[6].inner[18].PE_INST   |pe_903     |     6|
+|908   |    \outer[6].inner[19].PE_INST   |pe_904     |     6|
+|909   |    \outer[6].inner[1].PE_INST    |pe_905     |     4|
+|910   |    \outer[6].inner[20].PE_INST   |pe_906     |     6|
+|911   |    \outer[6].inner[21].PE_INST   |pe_907     |     6|
+|912   |    \outer[6].inner[22].PE_INST   |pe_908     |     6|
+|913   |    \outer[6].inner[23].PE_INST   |pe_909     |     6|
+|914   |    \outer[6].inner[24].PE_INST   |pe_910     |     6|
+|915   |    \outer[6].inner[25].PE_INST   |pe_911     |     6|
+|916   |    \outer[6].inner[26].PE_INST   |pe_912     |     6|
+|917   |    \outer[6].inner[27].PE_INST   |pe_913     |     6|
+|918   |    \outer[6].inner[28].PE_INST   |pe_914     |     6|
+|919   |    \outer[6].inner[29].PE_INST   |pe_915     |     6|
+|920   |    \outer[6].inner[2].PE_INST    |pe_916     |     5|
+|921   |    \outer[6].inner[30].PE_INST   |pe_917     |     6|
+|922   |    \outer[6].inner[31].PE_INST   |pe_918     |     4|
+|923   |    \outer[6].inner[32].PE_INST   |pe_919     |     3|
+|924   |    \outer[6].inner[3].PE_INST    |pe_920     |     6|
+|925   |    \outer[6].inner[4].PE_INST    |pe_921     |     6|
+|926   |    \outer[6].inner[5].PE_INST    |pe_922     |     6|
+|927   |    \outer[6].inner[6].PE_INST    |pe_923     |     6|
+|928   |    \outer[6].inner[7].PE_INST    |pe_924     |     6|
+|929   |    \outer[6].inner[8].PE_INST    |pe_925     |     6|
+|930   |    \outer[6].inner[9].PE_INST    |pe_926     |     6|
+|931   |    \outer[7].inner[10].PE_INST   |pe_927     |     7|
+|932   |    \outer[7].inner[11].PE_INST   |pe_928     |     7|
+|933   |    \outer[7].inner[12].PE_INST   |pe_929     |     7|
+|934   |    \outer[7].inner[13].PE_INST   |pe_930     |     7|
+|935   |    \outer[7].inner[14].PE_INST   |pe_931     |     7|
+|936   |    \outer[7].inner[15].PE_INST   |pe_932     |     7|
+|937   |    \outer[7].inner[16].PE_INST   |pe_933     |     7|
+|938   |    \outer[7].inner[17].PE_INST   |pe_934     |     7|
+|939   |    \outer[7].inner[18].PE_INST   |pe_935     |     7|
+|940   |    \outer[7].inner[19].PE_INST   |pe_936     |     7|
+|941   |    \outer[7].inner[1].PE_INST    |pe_937     |     5|
+|942   |    \outer[7].inner[20].PE_INST   |pe_938     |     7|
+|943   |    \outer[7].inner[21].PE_INST   |pe_939     |     7|
+|944   |    \outer[7].inner[22].PE_INST   |pe_940     |     7|
+|945   |    \outer[7].inner[23].PE_INST   |pe_941     |     7|
+|946   |    \outer[7].inner[24].PE_INST   |pe_942     |     7|
+|947   |    \outer[7].inner[25].PE_INST   |pe_943     |     7|
+|948   |    \outer[7].inner[26].PE_INST   |pe_944     |     7|
+|949   |    \outer[7].inner[27].PE_INST   |pe_945     |     7|
+|950   |    \outer[7].inner[28].PE_INST   |pe_946     |     7|
+|951   |    \outer[7].inner[29].PE_INST   |pe_947     |     7|
+|952   |    \outer[7].inner[2].PE_INST    |pe_948     |     6|
+|953   |    \outer[7].inner[30].PE_INST   |pe_949     |     7|
+|954   |    \outer[7].inner[31].PE_INST   |pe_950     |     5|
+|955   |    \outer[7].inner[32].PE_INST   |pe_951     |     3|
+|956   |    \outer[7].inner[3].PE_INST    |pe_952     |     7|
+|957   |    \outer[7].inner[4].PE_INST    |pe_953     |     7|
+|958   |    \outer[7].inner[5].PE_INST    |pe_954     |     7|
+|959   |    \outer[7].inner[6].PE_INST    |pe_955     |     7|
+|960   |    \outer[7].inner[7].PE_INST    |pe_956     |     7|
+|961   |    \outer[7].inner[8].PE_INST    |pe_957     |     7|
+|962   |    \outer[7].inner[9].PE_INST    |pe_958     |     7|
+|963   |    \outer[8].inner[10].PE_INST   |pe_959     |     6|
+|964   |    \outer[8].inner[11].PE_INST   |pe_960     |     6|
+|965   |    \outer[8].inner[12].PE_INST   |pe_961     |     6|
+|966   |    \outer[8].inner[13].PE_INST   |pe_962     |     6|
+|967   |    \outer[8].inner[14].PE_INST   |pe_963     |     6|
+|968   |    \outer[8].inner[15].PE_INST   |pe_964     |     6|
+|969   |    \outer[8].inner[16].PE_INST   |pe_965     |     6|
+|970   |    \outer[8].inner[17].PE_INST   |pe_966     |     6|
+|971   |    \outer[8].inner[18].PE_INST   |pe_967     |     6|
+|972   |    \outer[8].inner[19].PE_INST   |pe_968     |     6|
+|973   |    \outer[8].inner[1].PE_INST    |pe_969     |     4|
+|974   |    \outer[8].inner[20].PE_INST   |pe_970     |     6|
+|975   |    \outer[8].inner[21].PE_INST   |pe_971     |     6|
+|976   |    \outer[8].inner[22].PE_INST   |pe_972     |     6|
+|977   |    \outer[8].inner[23].PE_INST   |pe_973     |     6|
+|978   |    \outer[8].inner[24].PE_INST   |pe_974     |     6|
+|979   |    \outer[8].inner[25].PE_INST   |pe_975     |     6|
+|980   |    \outer[8].inner[26].PE_INST   |pe_976     |     6|
+|981   |    \outer[8].inner[27].PE_INST   |pe_977     |     6|
+|982   |    \outer[8].inner[28].PE_INST   |pe_978     |     6|
+|983   |    \outer[8].inner[29].PE_INST   |pe_979     |     6|
+|984   |    \outer[8].inner[2].PE_INST    |pe_980     |     5|
+|985   |    \outer[8].inner[30].PE_INST   |pe_981     |     6|
+|986   |    \outer[8].inner[31].PE_INST   |pe_982     |     4|
+|987   |    \outer[8].inner[32].PE_INST   |pe_983     |     3|
+|988   |    \outer[8].inner[3].PE_INST    |pe_984     |     6|
+|989   |    \outer[8].inner[4].PE_INST    |pe_985     |     6|
+|990   |    \outer[8].inner[5].PE_INST    |pe_986     |     6|
+|991   |    \outer[8].inner[6].PE_INST    |pe_987     |     6|
+|992   |    \outer[8].inner[7].PE_INST    |pe_988     |     6|
+|993   |    \outer[8].inner[8].PE_INST    |pe_989     |     6|
+|994   |    \outer[8].inner[9].PE_INST    |pe_990     |     6|
+|995   |    \outer[9].inner[10].PE_INST   |pe_991     |     6|
+|996   |    \outer[9].inner[11].PE_INST   |pe_992     |     6|
+|997   |    \outer[9].inner[12].PE_INST   |pe_993     |     6|
+|998   |    \outer[9].inner[13].PE_INST   |pe_994     |     6|
+|999   |    \outer[9].inner[14].PE_INST   |pe_995     |     6|
+|1000  |    \outer[9].inner[15].PE_INST   |pe_996     |     6|
+|1001  |    \outer[9].inner[16].PE_INST   |pe_997     |     6|
+|1002  |    \outer[9].inner[17].PE_INST   |pe_998     |     6|
+|1003  |    \outer[9].inner[18].PE_INST   |pe_999     |     6|
+|1004  |    \outer[9].inner[19].PE_INST   |pe_1000    |     6|
+|1005  |    \outer[9].inner[1].PE_INST    |pe_1001    |     4|
+|1006  |    \outer[9].inner[20].PE_INST   |pe_1002    |     6|
+|1007  |    \outer[9].inner[21].PE_INST   |pe_1003    |     6|
+|1008  |    \outer[9].inner[22].PE_INST   |pe_1004    |     6|
+|1009  |    \outer[9].inner[23].PE_INST   |pe_1005    |     6|
+|1010  |    \outer[9].inner[24].PE_INST   |pe_1006    |     6|
+|1011  |    \outer[9].inner[25].PE_INST   |pe_1007    |     6|
+|1012  |    \outer[9].inner[26].PE_INST   |pe_1008    |     6|
+|1013  |    \outer[9].inner[27].PE_INST   |pe_1009    |     6|
+|1014  |    \outer[9].inner[28].PE_INST   |pe_1010    |     6|
+|1015  |    \outer[9].inner[29].PE_INST   |pe_1011    |     6|
+|1016  |    \outer[9].inner[2].PE_INST    |pe_1012    |     5|
+|1017  |    \outer[9].inner[30].PE_INST   |pe_1013    |     6|
+|1018  |    \outer[9].inner[31].PE_INST   |pe_1014    |     4|
+|1019  |    \outer[9].inner[32].PE_INST   |pe_1015    |     3|
+|1020  |    \outer[9].inner[3].PE_INST    |pe_1016    |     6|
+|1021  |    \outer[9].inner[4].PE_INST    |pe_1017    |     6|
+|1022  |    \outer[9].inner[5].PE_INST    |pe_1018    |     6|
+|1023  |    \outer[9].inner[6].PE_INST    |pe_1019    |     6|
+|1024  |    \outer[9].inner[7].PE_INST    |pe_1020    |     6|
+|1025  |    \outer[9].inner[8].PE_INST    |pe_1021    |     6|
+|1026  |    \outer[9].inner[9].PE_INST    |pe_1022    |     6|
+|1027  |  FINITE_STATE_MACHINE            |FSM        |  2163|
+|1028  |  timer                           |Timer      |    82|
+|1029  |  vga_driver                      |VESADriver |    60|
++------+----------------------------------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:19 ; elapsed = 00:01:27 . Memory (MB): peak = 1060.793 ; gain = 854.008
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:04 ; elapsed = 00:01:18 . Memory (MB): peak = 1060.793 ; gain = 491.160
+Synthesis Optimization Complete : Time (s): cpu = 00:01:19 ; elapsed = 00:01:27 . Memory (MB): peak = 1060.793 ; gain = 854.008
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 41 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  LD => LDCE: 3 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+39 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:20 ; elapsed = 00:01:27 . Memory (MB): peak = 1060.793 ; gain = 827.656
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 1060.793 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 13 10:36:49 2018...

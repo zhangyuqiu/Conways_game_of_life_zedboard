@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  "C:/Xilinx/Vivado/2016.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv"
+sv xil_defaultlib  "../../../srcs/pe.sv"
+sv xil_defaultlib  "../../../srcs/pe_array.sv"
+sv xil_defaultlib  "../../../srcs/VESADriver.sv"
+sv xil_defaultlib  "../../../srcs/Timer.sv"
+sv xil_defaultlib  "../../../srcs/FSM.sv"
+sv xil_defaultlib  "../../../srcs/Display.sv"
+sv xil_defaultlib  "../../../srcs/Top.sv"
+sv xil_defaultlib  "../../../Conways_zedboard.srcs/sim_1/new/Top_tb.sv"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,48 @@
+{
+   guistr: "# # String gsaved with Nlview 6.5.12  2016-01-29 bk=1.3547 VDI=39 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -y 340 -defaultsOSRD
+preplace port Vsync -pg 1 -y 240 -defaultsOSRD
+preplace port sw -pg 1 -lvl 4:-100 -defaultsOSRD -top
+preplace port Hsync -pg 1 -y 220 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 360 -defaultsOSRD
+preplace port clk -pg 1 -lvl 4:-120 -defaultsOSRD -top
+preplace port reset -pg 1 -y 270 -defaultsOSRD
+preplace portBus blue -pg 1 -y 200 -defaultsOSRD
+preplace portBus green -pg 1 -y 180 -defaultsOSRD
+preplace portBus red -pg 1 -y 160 -defaultsOSRD
+preplace inst rst_processing_system7_0_100M -pg 1 -lvl 1 -y 170 -defaultsOSRD
+preplace inst Conways_write_4reg_0 -pg 1 -lvl 3 -y 230 -defaultsOSRD
+preplace inst Top_0 -pg 1 -lvl 4 -y 200 -defaultsOSRD
+preplace inst processing_system7_0_axi_periph -pg 1 -lvl 2 -y 190 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -y 420 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 1 4 NJ 340 NJ 340 NJ 340 NJ
+preplace netloc Top_0_Vsync 1 4 1 NJ
+preplace netloc Top_0_blue 1 4 1 NJ
+preplace netloc processing_system7_0_axi_periph_M00_AXI 1 2 1 N
+preplace netloc Top_0_output_row 1 2 3 770 80 NJ 80 1440
+preplace netloc Conways_write_4reg_0_write_single_pe 1 3 1 N
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 460
+preplace netloc Conways_write_4reg_0_control_signal 1 3 1 N
+preplace netloc Top_0_green 1 4 1 NJ
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 10 70 410
+preplace netloc Top_0_running_cycles 1 2 3 780 90 NJ 90 1430
+preplace netloc Top_0_Hsync 1 4 1 NJ
+preplace netloc Top_0_red 1 4 1 NJ
+preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 1 2 450 310 NJ
+preplace netloc clk_1 1 3 1 1100
+preplace netloc processing_system7_0_FIXED_IO 1 1 4 NJ 360 NJ 360 NJ 360 NJ
+preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 1 1 420
+preplace netloc sw_1 1 3 1 1110
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 80 430 320 770
+preplace netloc reset_1 1 0 4 NJ 270 NJ 70 NJ 70 NJ
+preplace netloc Conways_write_4reg_0_rowcoor 1 3 1 N
+levelinfo -pg 1 -10 220 620 940 1280 1470 -top -20 -bot 570
+",
+}
+{
+   da_axi4_cnt: "7",
+   da_board_cnt: "9",
+   da_mb_cnt: "1",
+   da_ps7_cnt: "1",
+}
