@@ -1,0 +1,90 @@
+`timescale 1ns / 1ps
+`include "pe_array_decs.sv"
+`include "pe_decs.sv"
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 07/29/2015 02:30:39 PM
+// Design Name: 
+// Module Name: FSM
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module FSM(
+    input clk,
+    input trigger,
+    input enb,
+    input run,
+    input reset,
+	input logic [`N_PX_BITS-1:0] xin,
+    input logic [`N_PY_BITS-1:0] yin, 
+    output logic [`N_PX_BITS-1:0] x, 
+    output logic [`N_PY_BITS-1:0] y,
+    output logic [`PE_CMD_BITS-1:0] cmd,
+    output logic [`PE_STATE_BITS-1:0] val,
+    input logic [9:0] num_of_process_cycles,
+    output logic [9:0] num_of_running_cycles
+    );
+    
+    parameter DEFAULT = 4'b0000, RUN = 4'hF, WRITE = 4'b0001, WRITEALL = 4'b0010, WAIT = 4'b0011;
+    
+    logic [3:0] state, next_state;
+    logic runenb;
+    
+    assign runenb = (num_of_process_cycles > num_of_running_cycles);
+    
+    
+    always_ff @(posedge clk) begin
+        if(reset) begin state <= DEFAULT; 
+                        num_of_running_cycles <= 0; 
+                  end
+        else state <= next_state;
+        if(state == RUN) num_of_running_cycles <= num_of_running_cycles + 1;  
+        if(state == DEFAULT) begin x <= 0; y <= 0; val <= 0; cmd <= `PE_CMD_NOP; end
+        if(state == WRITE) begin x <= xin; y <= yin; val <= 1; cmd <= `PE_CMD_WRITE; end
+        if(state == RUN) begin x <= 0; y <= 0; cmd <= `PE_CMD_PROCESS; val <= 0; end
+    end
+    
+    always_comb begin
+		
+    end
+    
+    always_comb begin
+        case(state)
+            DEFAULT: begin
+				if (enb & !run) next_state = `PE_WRITE_MOD ? WRITEALL:WRITE;
+				//else if((run & trigger) & (num_of_process_cycles > num_of_running_cycles)) next_state = RUN;
+				else if((run & trigger) & (runenb)) next_state = RUN;
+				else next_state = DEFAULT;
+            end
+			WRITE: begin
+				//if (enb) next_state = WRITE;
+				//else if((run & trigger) & (runenb)) next_state = RUN; 
+				//else next_state = DEFAULT;
+				next_state = DEFAULT;
+			end
+			WRITEALL: begin
+			     
+			end
+            RUN: begin
+                next_state = DEFAULT;
+            end                    
+            default: begin        
+                next_state = DEFAULT;      
+            end                                      
+        endcase
+    end
+    
+endmodule
